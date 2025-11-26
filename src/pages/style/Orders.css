@@ -1,0 +1,135 @@
+.orders-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* HEADER */
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.orders-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.orders-header input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+}
+
+/* EMPTY STATE */
+.empty-orders {
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.empty-orders button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background: #ffd814;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ORDER CARD */
+.order-card {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+/* TOP SUMMARY BAR */
+.order-top {
+  background: #f3f3f3;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  font-size: 14px;
+}
+
+.order-top span {
+  color: #666;
+  display: block;
+  font-size: 12px;
+}
+
+.order-top strong {
+  font-weight: 600;
+}
+
+/* STATUS COLORS */
+.status.processing { color: orange; }
+.status.shipped { color: blue; }
+.status.delivered { color: green; }
+
+/* ITEMS */
+.order-items {
+  padding: 12px;
+}
+
+.order-item {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.order-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.order-item-info {
+  flex: 1;
+}
+
+.order-item-info h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.order-item button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .order-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item img {
+    width: 100%;
+    height: 160px;
+  }
+
+  .order-item button {
+    width: 100%;
+  }
+}

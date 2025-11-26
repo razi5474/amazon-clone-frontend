@@ -1,0 +1,53 @@
+/* src/styles/banner.css */
+.banner-slider {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner-slide {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay text */
+.banner-overlay {
+  position: absolute;
+  left: 6%;
+  top: 18%;
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  max-width: 480px;
+}
+
+.banner-title {
+  font-size: 36px;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.banner-sub {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .banner-slide { height: 320px; }
+  .banner-title { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+  .banner-slide { height: 180px; }
+  .banner-overlay { left: 6%; top: 12%; }
+  .banner-title { font-size: 18px; }
+  .banner-sub { font-size: 13px; }
+}

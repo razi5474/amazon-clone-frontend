@@ -1,0 +1,109 @@
+/* ============================= */
+/* CHECKOUT PAGE LAYOUT */
+/* ============================= */
+
+.checkout-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* DELIVERY + SUMMARY */
+/* ============================= */
+
+.checkout-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 16px;
+}
+
+.checkout-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.checkout-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.checkout-total {
+  font-weight: 700;
+  font-size: 18px;
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+}
+
+/* ============================= */
+/* ORDER ITEMS */
+/* ============================= */
+
+.checkout-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.checkout-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.checkout-item-details {
+  flex: 1;
+}
+
+.checkout-item-details h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.checkout-item-details p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ============================= */
+/* PAY BUTTON */
+/* ============================= */
+
+.checkout-pay-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  background: #ffd814;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.checkout-pay-btn:hover {
+  background: #f7ca00;
+}
+
+.checkout-pay-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

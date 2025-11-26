@@ -1,0 +1,195 @@
+/* Page background and center alignment */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #f2f2f2; /* page background color */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif; /* optional, consistent font */
+}
+
+.auth-page {
+  min-height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Top Amazon logo */
+.auth-logo-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-top-logo {
+  width: 120px;
+  max-width: 80%;
+  height: auto;
+}
+
+/* Card styling */
+.auth-card {
+  width: 400px;
+  max-width: 95%; /* responsive for mobile */
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Title */
+.auth-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Labels and inputs */
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 12px; /* slightly bigger for better touch on mobile */
+  margin: 6px 0 14px;
+  border: 1px solid #a6a6a6;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.auth-btn,
+.create-btn,
+.google-btn {
+  width: 100%;
+  padding: 12px; /* match input height */
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.auth-btn {
+  background: #f0c14b;
+  border: 1px solid #a88734;
+  color: #111;
+}
+
+.create-btn {
+  background: #e7e9ec;
+  border: 1px solid #adb1b8;
+  color: #111;
+}
+
+.google-btn {
+  background: white;
+  border: 1px solid #adb1b8;
+  color: #555;
+}
+
+/* Google icon */
+.google-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Dummy text below buttons */
+.auth-dummy {
+  font-size: 12px;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.auth-dummy a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.auth-dummy a:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 15px 0;
+  color: #555;
+  font-size: 13px;
+}
+
+/* Footer */
+.auth-footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+.auth-footer a {
+  color: #0066c0;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 480px) {
+  .auth-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .auth-top-logo {
+    width: 100px;
+  }
+
+  input,
+  .auth-btn,
+  .create-btn,
+  .google-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+}
+.auth-error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.auth-card input[type="password"] {
+  padding-right: 50px; /* leave space for show/hide toggle */
+}

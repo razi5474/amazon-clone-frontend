@@ -1,0 +1,132 @@
+.category-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.category-sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.desktop-hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-hide {
+    display: inline-block;
+  }
+  .category-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(-100%);
+  }
+}
+
+.filter-hamburger {
+  display: none;
+  padding: 8px 16px;
+  background: #ff6f61;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .filter-hamburger {
+    display: inline-block;
+  }
+}
+
+.price-ranges li {
+  padding: 6px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.price-ranges li:hover {
+  color: #ff6f61;
+}
+
+/* Manual price - stacked on desktop */
+.manual-price {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.manual-price input {
+  width: 100%; /* full width for better alignment */
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.manual-price span {
+  display: none; /* no '-' needed for vertical layout */
+}
+
+.apply-btn {
+  padding: 8px 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff6f61, #ff9472);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Reviews */
+.filter-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.filter-section ul li:hover {
+  color: #ff6f61;
+}
+
+/* Responsive tweaks for grid/mobile */
+@media (max-width: 480px) {
+  .manual-price input {
+    width: 100%;
+  }
+  .apply-btn {
+    font-size: 14px;
+  }
+}
